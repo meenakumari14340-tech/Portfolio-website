@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <style>
+    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    /* background: #880b79a8; */
+    color:rgb(248, 252, 248);
+    min-height:100vh;
+    padding: top 90px;
+    overflow-x: hidden;
+    background:linear-gradient(#0d0a0c,#1d081d,#000);
+}
+.navbar{
+    background:linear-gradient(135deg,#050607,#2a1a50,#000);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    border-bottom:1px solid rgb(244, 9, 216);
+    box-shadow:0 0 25px rgb(112, 3, 70);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width:100%;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+}
+.logo span{
+    color:#f507ae;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    padding: 10px;
+    gap:20px;
+    font-size: 13px;
+
+}
+
+.nav-links a:hover{
+    color:rgb(235, 91, 180);
+}
+
+.contact-btn{
+    background-color: rgb(224, 6, 140);
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+}
+
+.contact-btn:hover{
+    transform:scale(1.05);
+    background-color: #c05ea2;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 10%;
+    text-align: left;
+    margin-top: 100px;
+    /* color:#2a1a50; */
+    color:#f507ae;
+    min-height: 100vh;
+}
+
+.content{
+    max-width:50%;
+    color:rgb(255, 255, 255);
+}
+
+.content h3{
+    font-size:28px;
+    color:#f507ae;
+}
+.content h1{
+    font-size:60px;
+    margin:15px 0;
+}
+
+.content span{
+    color:#f507ae;
+}
+
+.content p{
+    margin:25px 0;
+    color:rgb(255, 255, 255);
+    line-height:1.8;
+}
+
+.profile img{
+    margin-top:30px; 
+    width:300px;
+    height:400px;
+    border-radius:50%;
+    object-fit:cover;
+     border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+    /* border:1px solid rgb(17, 2, 91);
+    box-shadow: 0 0 25px rgba(109, 48, 241, 0.648); */
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    gap:3px;
+    flex-wrap:wrap;
+    /* color:#f9f7f7 */
+    color:#f507ae;
+}
+.intern-row{
+    display: flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.intern-row1{
+    display: flex;
+    justify-content:center;
+    gap:100px;
+    flex-wrap:wrap;
+    border-radius: 10px ;
+}
+.container1{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+}
+.container2{
+    position: relative;
+    width: 30%;
+    background-color: rgb(5, 5, 5);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+}
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+.skill-box{
+    background-color:rgb(9, 9, 9);
+    color:rgb(248, 246, 246);
+    padding:15px 25px;
+    border-radius:10px;
+    border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+    font-weight:bold;
+}
+.contact-card{
+    background: rgb(7, 7, 7);
+    color: rgb(253, 251, 251);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+}
+
+.contact-card a{
+     color:#d706ea;
+    text-decoration: none;
+    /* color: white; */
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+.contact-card a:hover{
+    color: rgb(223, 99, 212);
+}
+.contact-main{
+    display: flex;
+    flex-direction: column;   /* 👈 THIS makes vertical */
+    gap: 20px;                /* space between boxes */
+    max-width: 400px;
+    position: relative;
+    width: 100%;
+    background-color: rgb(6, 6, 6);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 9, 216);
+    box-shadow: 0 0 25px rgb(96, 2, 60);
+}
+.container p{
+    color: whitesmoke;
+}
+.container1 p{
+    color: whitesmoke;
+}
+.container1 li{
+    color: whitesmoke;
+}
+.contact-card p{
+   color:wheat;
+    /* color:#d706ea; */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">Mee<span>na</span></div>
+
+     <div class="nav-links">
+        <a href="#Home">Home</a>
+        <a href="#Internships">Internships</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Professional Courses">Professional Courses</a>
+        <a href="#Certifications">Certifications</a>
+        <a href="#Technical Skills">Technical Skills</a>
+        <a href="#Achivements & Workshops">Achivements & Workshops</a>
+    </div>
+    <button class="contact-btn" onclick="location.href='#contact'">Contact Me</button>
+    </nav>
+
+    <section class="hero" id="Home">
+        <div class="content">
+    <h3>Hii</h3>
+    <h1>I'm <span>Meena Kumari</span><br>
+    a Full Stack Web Developer</h1>
+    <p>Passionate Full FullStack Web Developer specializing in Python FullStack & MERN Stack technologies.</p>
+    </div>
+
+    <div class="profile">
+    <img src="mee1.jpeg" alt="Home">
+    </div>
+
+    </section>
+    <section class="hero" id="Internships">
+        <div>
+            <h1>INTERNSHIPS</h1><br><br>
+            <div class="intern-row">
+            <div class="container">
+                <h2>IBM Cognos Analytics Intern</h2><br>
+                <p>Worked on Data Analytics & Visualization using IBM Cognos Analytics.</p>
+            </div>
+            <div class="container">
+                <h2>MERN Stack Development Intern</h2><br>
+                <p>Developed Full-stack Web applications with MongoDB,Express.js,React, and Node.js.</p>
+            </div>
+            <div class="container">
+                <h2>Web Development Intern</h2>
+                <p>Built user-friendly and responsive web applications using HTML,CSS & JavaScript.</p>
+            </div>
+            </div>
+        </div>
+    </section> 
+    <section class="hero" id="Projects">
+        <div>
+            <h1>ACADEMIC PROJECTS</h1><br><br>
+            <div class="intern-row">
+                <div class="container">
+                    <h2>Interactive Quiz App</h2><br><br><br>
+                    <p>Developed Using HTML, CSS, & JavaScript. Features include dynamic score calculations and MCQ functionality.</p>
+                </div>
+                <div class="container">
+                    <h2>Portfoli Website</h2><br>
+                    <p>Developed a responive Portfolio Website using HTML, CSS & JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section class="hero" id="Professional Courses">
+        <div>
+            <h1>PROFESSIONAL COURSES</h1><br><br>
+                <div class="container1">
+                    <h2>Python  FullStack Development</h2><br><br>
+                    <p>Built Dynamic Web applications using Python, HTML, CSS, JavaScript & databases like Node.js, & My SQL.</p>
+                </div>
+        </div>
+    </section>
+    <section class="hero" id="Certifications">
+        <div>
+            <h1>CERTIFICATIONS</h1><br><br>
+            <div class="container1">
+             <ul>
+                <li>Front-End Technologies</li><br>
+                <li>IBM HTML, CSS & JavaScript for Beginners</li><br>
+                <li>Introduction to Cognos</li><br>
+                <li>EBPL</li><br>
+                <li>Devops Course</li><br>
+                <li>Agile Methodology</li>
+             </ul>   
+            </div>
+        </div>
+    </section>
+    <section class="hero" id="Technical Skills">
+        <div>
+            <h1>TECHNICAL SKILLS</h1><br>
+        <div class="skills-container">
+                <div class="skill-box">Python</div>
+                <div class="skill-box">HTML5</div>
+                <div class="skill-box">CSS3</div>
+                <div class="skill-box">JavaScript</div>
+                <div class="skill-box">Node.js</div>
+                <div class="skill-box">My SQL</div>
+                <div class="skill-box">MongoDB</div>
+                <div class="skill-box">React.js</div>
+                <div class="skill-box">Express</div>
+                <div class="skill-box">IBM Cognos Analytics</div>
+                <div class="skill-box">Git, GitHub</div>
+                <div class="skill-box">Agile Methodology</div>
+                <div class="skill-box">Devops Basics</div>
+        </div>
+        </div>
+    </section>
+    <section class="hero" id="Achivements & Workshops">
+        <div>
+            <h1>ACHIVEMENTS & WORKSHOPS</h1><br><br><br>
+            <div class="intern-row1">
+            <div class="container2">
+                <h2>Achivements</h2><br><br>
+                <div class="skill-box"><ul><li>Foundation Ignite Bootcamp -
+               Venture Idea Development Certificate</li></ul>
+               </div><br><br>
+                <div class="skill-box"><ul><li>Paper Presentation Participant -
+              DMI Engineering College</li></ul>
+               </div>
+            </div> 
+            <div class="container2">
+                <h2>Workshops</h2><br><br>
+                <div class="skill-box">
+                    <ul><li>React JS & QR Code Generation Workshop Participant</li></ul>
+               </div><br><br>
+                <div class="skill-box"><ul><li>Software Development Workshop Participant</li></ul>
+               </div>
+            </div>  
+            </div>
+        </div>
+    </section>
+    <section class="hero" id="contact">
+        <div>
+    <h1>Contact Me</h1><br><br>
+
+    <div class="contact-main">
+        <div class="contact-card">
+        <p><strong>Email:</strong><a href="https://mail.google.com/mail/?view:cm&to=meenakumari14340@gmail.com"target="_blank">meenakumari14340@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+        <p><strong>Phone:</strong><a href="tel:+91 9487984117">+91 9487984117</a></p>
+        </div>
+        <div class="contact-card">
+        <p><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/meena-kumari-r-40291640a" target="_blank">View Linked In Profile</a></p>
+        </div>
+        <div class="contact-card">
+        <p><strong>GitHub:</strong><a href="https://github.com/meenakumari14340-tech"target="_blank">GitHub Profile</a></p>
+        </div>
+    </div>
+    </div>
+    </section>
+</section>
+</body>
+</html>
